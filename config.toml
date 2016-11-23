@@ -1,5 +1,6 @@
 title = "David Paul Weber"
 description = "Personal portfolio and blog"
 languageCode = "en-us"
-baseurl = "http://replace-this-with-your-hugo-site.com/"
+baseurl = "https://dpweberza.github.io/davidpaulweber.com/"
 categories = ["personal", "work", "projects"]
+theme = "hyde"
