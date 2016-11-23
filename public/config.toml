@@ -1,0 +1,5 @@
+title = "David Paul Weber"
+description = "Personal portfolio and blog"
+languageCode = "en-us"
+baseurl = "http://replace-this-with-your-hugo-site.com/"
+categories = ["personal", "work", "projects"]
