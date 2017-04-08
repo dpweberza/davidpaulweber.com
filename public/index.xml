@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>David Weber</title>
+    <link>https://www.davidpaulweber.com/index.xml</link>
+    <description>Recent content on David Weber</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <managingEditor>dpweberza@gmail.com (David Weber)</managingEditor>
+    <webMaster>dpweberza@gmail.com (David Weber)</webMaster>
+    <lastBuildDate>Sat, 08 Apr 2017 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://www.davidpaulweber.com/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Quote Builder</title>
+      <link>https://www.davidpaulweber.com/post/2017-04-08-quote-builder/</link>
+      <pubDate>Sat, 08 Apr 2017 00:00:00 +0000</pubDate>
+      <author>dpweberza@gmail.com (David Weber)</author>
+      <guid>https://www.davidpaulweber.com/post/2017-04-08-quote-builder/</guid>
+      <description>&lt;p&gt;Coming soon&amp;hellip;.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>About me</title>
+      <link>https://www.davidpaulweber.com/page/about/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <author>dpweberza@gmail.com (David Weber)</author>
+      <guid>https://www.davidpaulweber.com/page/about/</guid>
+      <description>&lt;p&gt;Hi I&amp;rsquo;m David&lt;/p&gt;
+
+&lt;p&gt;More coming soon&amp;hellip;.&lt;/p&gt;
+
+&lt;p&gt;You can view my LinkedIn profile below:
+&lt;div class=&#34;linked-in-profile&#34;&gt;
+    &lt;script src=&#34;//platform.linkedin.com/in.js&#34; type=&#34;text/javascript&#34;&gt;&lt;/script&gt;
+    &lt;script type=&#34;IN/MemberProfile&#34; data-id=&#34;https://www.linkedin.com/in/david-weber-55707532&#34; data-format=&#34;inline&#34; data-related=&#34;false&#34;&gt;&lt;/script&gt;
+&lt;/div&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>
