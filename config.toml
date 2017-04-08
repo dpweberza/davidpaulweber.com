@@ -1,6 +1,28 @@
-title = "David Paul Weber"
-description = "Personal portfolio and blog"
-languageCode = "en-us"
-baseurl = "https://dpweberza.github.io/davidpaulweber.com/"
-categories = ["personal", "work", "projects"]
-theme = "hyde"
+theme = 'sophie'
+languageCode = 'en-us'
+title = 'David Weber'
+baseurl = 'https://www.davidpaulweber.com'
+
+[params]
+description = 'Personal portfolio and blog about software development'
+tagline = 'Software Engineer'
+categories = ['personal', 'work', 'projects']
+googleAnalytics = 'UA-96882910-1'
+disqusShortname = 'davidpaulweber'
+
+[author]
+  name = 'David Weber'
+  email = 'dpweberza@gmail.com'
+  github = 'dpweberza'
+
+[[menu.main]]
+    name = 'Blog'
+    url = '/'
+
+[[menu.main]]
+    name = 'About'
+    url = '/page/about'
+
+[[menu.main]]
+    name = 'Projects'
+    url = '/tags/projects'

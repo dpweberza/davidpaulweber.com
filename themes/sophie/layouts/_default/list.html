@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+{{ partial "head.html" . }}
+<body>
+<div>
+    {{ partial "nav.html" . }}
+    <div class="content">
+        <section class="list-posts">
+            {{ range .Paginator.Pages }}
+            <article class="post">
+                <div class="post-header">
+                    <h1 class="post-title"><a href="{{ .Permalink }}">{{ .Title }}</a></h1>
+                    <span class="post-date">{{ .Date.Format "02 Jan 2006" }}</span>
+                    <p class="post-meta">
+                        {{ with .Params.author }}
+                        By <strong class="post-author">{{ . }}</strong>
+                        {{ end }}
+                        {{ if isset .Params "tags" }}
+                        {{ $baseUrl := .Site.BaseURL }}
+                        {{ range .Params.tags }}<a class="post-tag post-tag-{{ . }}" href="{{ $baseUrl }}/tags/{{ . | urlize }}">#{{ . }}</a>{{ end }}
+                        {{ end }}
+                    </p>
+                </div>
+                <div class="post-description">
+                    <p>{{ .Content }}</p>
+                </div>
+            </article>
+            {{ end }}
+        </section>
+
+        {{ partial "footer.html" . }}
+        {{ partial "analytics.html" . }}
+    </div>
+</div>
+{{ partial "body.html" . }}
+</body>
+</html>

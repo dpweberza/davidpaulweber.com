@@ -1,0 +1,73 @@
+.navigation
+  height 72px
+
+.navigation-btn
+  display block
+  position absolute
+  top 8px
+  right 8px
+  z-index 220
+  outline none
+  margin-right 10px
+  margin-top 10px
+
+.navigation-list
+  left -9999px
+  position absolute
+  &.open
+    background-color #ffffff
+    bottom 0
+    left 0
+    margin 0
+    padding-top 3.5em
+    position absolute
+    top 0
+    width 100%
+    z-index 210
+
+.navigation-link
+  color #182532
+  display block
+  font-size 1.5em
+  font-weight 400
+  padding 0.5em 0.75em
+  text-align center
+  &:hover
+    color #3356bf
+  &.is-active
+    color #3356bf
+    &:hover
+      background none
+
+@media only screen and (min-width 768px)
+  .navigation
+    height auto
+    margin 1em 0 3em 0
+  .navigation-btn
+    left -9999px
+  .navigation-list
+    left 0
+    position relative
+  .navigation-item
+    display inline-block
+    width auto
+  .navigation-link
+    padding 0.5em 1.5em
+
+@media only screen and (min-width 992px)
+  .navigation
+    margin 2em 0 3em 0
+    text-align center
+
+@media only screen and (min-width 1240px)
+  .navigation
+    margin 0 5em 3em 0
+    float right
+  .start-page
+    .navigation
+      float none
+      margin 0 0 3em 0
+
+@media only screen and (min-width 1600px)
+  .navigation
+    margin-right 0

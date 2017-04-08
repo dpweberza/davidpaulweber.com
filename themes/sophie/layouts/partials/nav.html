@@ -1,0 +1,20 @@
+<header class="site-header">
+    <nav class="navigation">
+        <ul class="navigation-list" id="nav-list">
+            {{ range .Site.Menus.main }}
+            <li class="navigation-item">
+                <a class="navigation-link" href="{{ .URL }}">{{ .Name }}</a>
+            </li>
+            {{ end }}
+        </ul>
+        <button class="c-hamburger c-hamburger--htx navigation-btn" id="nav-btn">
+            <span>toggle menu</span>
+        </button>
+    </nav>
+    <h1 class="logotype">
+        <a class="logotype-link" href="{{ .Site.BaseURL }}">
+            <span class="logotype-text">{{ .Site.Title }}</span>
+            <span class="logotype-tag-line">{{ .Site.Params.Tagline }}</span>
+        </a>
+    </h1>
+</header>
