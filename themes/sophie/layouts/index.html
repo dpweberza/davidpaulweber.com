@@ -5,6 +5,7 @@
 <div>
     {{ partial "nav.html" . }}
     <div class="content">
+        {{ partial "intro.html" . }}
         <section class="posts">
             {{ $paginator := .Paginate (where .Data.Pages "Type" "post") }}
             {{ range $paginator.Pages }}

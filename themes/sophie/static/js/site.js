@@ -1,6 +1,8 @@
 (function ()
 {
 	'use strict';
+
+	// Hamburger Menu
 	var toggles = document.querySelectorAll('.c-hamburger');
 	for (var i = toggles.length - 1; i >= 0; i--)
 	{
@@ -22,4 +24,14 @@
 		var nav = document.getElementById('nav-list');
 		nav.classList.toggle('open');
 	}, false);
+
+	// Open external links in new tabs
+	var links = document.querySelectorAll('.content a');
+	for (var i = 0, length = links.length; i < length; i++)
+	{
+		if (links[i].hostname != window.location.hostname)
+		{
+			links[i].target = '_blank';
+		}
+	}
 })();

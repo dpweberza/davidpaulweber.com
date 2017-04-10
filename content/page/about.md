@@ -1,12 +1,12 @@
 ---
 title: About me
-subtitle: Why you'd want to go on a date with me
-comments: false
 ---
 
-Hi I'm David
+Hi, I'm David
 
-More coming soon....
+There's more coming here soon, in the mean time please view my LinkedIn profile below:
 
 You can view my LinkedIn profile below:
 {{< linkedin david-weber-55707532 >}}
+
+[comment]: <> (You can download my CV [here](/pdf/vc.pdf))

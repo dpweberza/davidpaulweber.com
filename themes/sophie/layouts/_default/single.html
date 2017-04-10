@@ -13,9 +13,8 @@
                     By <strong class="post-author">{{ . }}</strong>
                     {{ end }}
                     {{ if isset .Params "tags" }}
-                    under
                     {{ $baseUrl := .Site.BaseURL }}
-                    {{ range .Params.tags }}<a class="post-tag post-tag-{{ . }}" href="{{ $baseUrl }}/tags/{{ . | urlize }}">{{ . }}</a>{{ end }}
+                    {{ range .Params.tags }}<a class="post-tag post-tag-{{ . }}" href="{{ $baseUrl }}/tags/{{ . | urlize }}">#{{ . }}</a>{{ end }}
                     {{ end }}
                 </p>
             </header>
