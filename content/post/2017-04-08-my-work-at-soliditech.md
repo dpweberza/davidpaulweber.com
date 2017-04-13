@@ -1,7 +1,7 @@
 ---
 title: My work at SOLIDitech
 date: 2017-04-08
-tags = ["Work", "SOLIDitech", "History"]
+tags: ["Work", "SOLIDitech", "History"]
 ---
 
 I've been working at [SOLIDitech](https://www.soliditech.com) in Cape Town, South Africa since May 2011.
