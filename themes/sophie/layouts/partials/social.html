@@ -35,7 +35,7 @@
     </a>
 
     <!-- Sharingbutton LinkedIn -->
-    <a class="resp-sharing-button__link" href="https://www.linkedin.com/shareArticle?mini=true&amp;{{ (querify "url" .Permalink "title" .Title "source" .Site.BaseURL) | safeURL }}"
+    <a class="resp-sharing-button__link" href="https://www.linkedin.com/shareArticle?mini=true&amp;{{ (querify "url" .Permalink "title" .Title "summary" .Summary "source" .Site.BaseURL) | safeURL }}"
     target="_blank" aria-label="">
     <div class="resp-sharing-button resp-sharing-button--linkedin resp-sharing-button--small">
         <div aria-hidden="true" class="resp-sharing-button__icon resp-sharing-button__icon--solid">
