@@ -21,6 +21,7 @@
             <div class="post-description">
                 {{ .Content }}
             </div>
+            {{ partial "social.html" . }}
             {{ template "_internal/disqus.html" . }}
         </article>
     </div>

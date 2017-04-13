@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+{{ partial "head.html" . }}
+<body>
+<div>
+    {{ partial "nav.html" . }}
+    <div class="content">
+        {{ $data := .Data }}
+        <section class="tags">
+            <p>Pick a topic below to view related posts</p>
+            <ul>
+                {{ range $key, $value := .Data.Terms.ByCount }}
+                <li>
+                    <a href="{{ $.Site.LanguagePrefix }}/{{ $data.Plural }}/{{ $value.Name | urlize }}" class="post-tag post-tag-{{ . }}">{{ $value.Name | title }} - {{ $value.Count }} posts</a>
+                </li>
+                {{ end }}
+            </ul>
+        </section>
+        {{ partial "footer.html" . }}
+        {{ partial "analytics.html" . }}
+    </div>
+</div>
+{{ partial "body.html" . }}
+</body>
+</html>
