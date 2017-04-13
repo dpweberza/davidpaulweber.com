@@ -2,7 +2,7 @@
     <span class="call-to-action">Care to share?</span>
 
     <!-- Sharingbutton Facebook -->
-    <a class="resp-sharing-button__link" href="https://facebook.com/sharer/sharer.php?{{ (querify " u" .Permalink) | safeURL }}" target="_blank" aria-label="">
+    <a class="resp-sharing-button__link" href="https://facebook.com/sharer/sharer.php?{{ (querify "u" .Permalink) | safeURL }}" target="_blank" aria-label="">
     <div class="resp-sharing-button resp-sharing-button--facebook resp-sharing-button--small">
         <div aria-hidden="true" class="resp-sharing-button__icon resp-sharing-button__icon--solid">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
@@ -13,7 +13,7 @@
     </a>
 
     <!-- Sharingbutton Twitter -->
-    <a class="resp-sharing-button__link" href="https://twitter.com/intent/tweet/?{{ (querify " url" .Permalink "text" .Title) | safeURL }}" target="_blank" aria-label="">
+    <a class="resp-sharing-button__link" href="https://twitter.com/intent/tweet/?{{ (querify "url" .Permalink "text" .Title) | safeURL }}" target="_blank" aria-label="">
     <div class="resp-sharing-button resp-sharing-button--twitter resp-sharing-button--small">
         <div aria-hidden="true" class="resp-sharing-button__icon resp-sharing-button__icon--solid">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
@@ -24,7 +24,7 @@
     </a>
 
     <!-- Sharingbutton Google+ -->
-    <a class="resp-sharing-button__link" href="https://plus.google.com/share?{{ (querify " url" .Permalink) | safeURL }}" target="_blank" aria-label="">
+    <a class="resp-sharing-button__link" href="https://plus.google.com/share?{{ (querify "url" .Permalink) | safeURL }}" target="_blank" aria-label="">
     <div class="resp-sharing-button resp-sharing-button--google resp-sharing-button--small">
         <div aria-hidden="true" class="resp-sharing-button__icon resp-sharing-button__icon--solid">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
@@ -35,7 +35,7 @@
     </a>
 
     <!-- Sharingbutton LinkedIn -->
-    <a class="resp-sharing-button__link" href="https://www.linkedin.com/shareArticle?mini=true&amp;{{ (querify " url" .Permalink "title" .Title "summary" .Summary "source" .Site.BaseURL) | safeURL }}"
+    <a class="resp-sharing-button__link" href="https://www.linkedin.com/shareArticle?mini=true&amp;{{ (querify "url" .Permalink "title" .Title "source" .Site.BaseURL) | safeURL }}"
     target="_blank" aria-label="">
     <div class="resp-sharing-button resp-sharing-button--linkedin resp-sharing-button--small">
         <div aria-hidden="true" class="resp-sharing-button__icon resp-sharing-button__icon--solid">
@@ -47,7 +47,7 @@
     </a>
 
     <!-- Sharingbutton Reddit -->
-    <a class="resp-sharing-button__link" href="https://reddit.com/submit/?{{ (querify " url" .Permalink) | safeURL }}" target="_blank" aria-label="">
+    <a class="resp-sharing-button__link" href="https://reddit.com/submit/?{{ (querify "url" .Permalink) | safeURL }}" target="_blank" aria-label="">
     <div class="resp-sharing-button resp-sharing-button--reddit resp-sharing-button--small">
         <div aria-hidden="true" class="resp-sharing-button__icon resp-sharing-button__icon--solid">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
