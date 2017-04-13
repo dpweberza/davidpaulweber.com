@@ -1,6 +1,7 @@
 +++
 date = "2017-04-13T20:10:59+00:00"
 draft = true
+tags = ["Work", "SOLIDitech", "Technical", "Java", "Hibernate", "Scalability"]
 title = "Hibernate Batch Inserts"
 
 +++
@@ -17,3 +18,128 @@ Back at square one I was left with stock jdbc and prepared statements. Writing m
 Luckily I figured out how to get Hibernate to generate the prepared statement for me, couple that with some jdbc code and I rolled out a neat util to batch insert any object we had mapped.
 
 I'll share the code for this utility below, I was happy that I managed to shave that 2 minute request down to 4 seconds with this tool.
+
+
+
+
+```
+
+ /**
+
+* Inserts a List of DataBeans in one batch and sets the ids on the objects.
+
+* @param objects
+
+* @param connection - make sure you connection.commit and connection.close your own connection.
+
+* @throws Exception
+
+*/
+
+public void insertObjectsInOneBatch(LinkedList<? extends DataBean> objects, Connection connection) throws Exception
+
+{
+
+if (objects.isEmpty())
+
+throw new Exception("objects argument is empty!");
+
+DataBean sampleObject = objects.get(0);
+
+ClassMetadata hibernateMetadata = HibernateManager.getSessionFactory().getClassMetadata(sampleObject.getClass());
+
+if (hibernateMetadata == null)
+
+throw new Exception("Failed to load hibernate metadata for class: " + sampleObject.getClassName() + ".\\nP.S. This wont work with lazy-loaded builds.");
+
+AbstractEntityPersister persister = (AbstractEntityPersister) hibernateMetadata;
+
+String[] columnNames = persister.getPropertyNames();
+
+Field sqlInsertString = ReflectionUtil.getField("sqlInsertString", persister);
+
+String sql = (String) sqlInsertString.get(persister);
+
+PreparedStatement ps = null;
+
+try
+
+{
+
+connection.setAutoCommit(false);
+
+ps = connection.prepareStatement(sql, Statement.RETURN_GENERATED_KEYS);
+
+int count = 0;
+
+for (DataBean object : objects)
+
+{
+
+for (int i = 0; i < columnNames.length; i++)
+
+{
+
+String columnName = columnNames[i];
+
+Object propertyValue = persister.getPropertyValue(object, columnName);
+
+ps.setObject(i + 1, propertyValue);
+
+}
+
+ps.setObject(columnNames.length + 1, null); // Set id to null
+
+ps.addBatch();
+
+if (++count % batchSize == 0)
+
+ps.executeBatch();
+
+}
+
+ps.executeBatch();
+
+ResultSet rs = ps.getGeneratedKeys();
+
+// Set the inserted ids on the objects
+
+int i = 0;
+
+while (rs.next())
+
+{
+
+long id = rs.getLong(1);
+
+ReflectionUtil.setField(objects.get(i), "id", id);
+
+i++;
+
+}
+
+}
+
+catch (Exception ex)
+
+{
+
+LogManager.error(this, ex);
+
+throw ex;
+
+}
+
+finally
+
+{
+
+if (ps != null)
+
+ps.close();
+
+}
+
+}
+
+```
