@@ -1,7 +1,31 @@
-(function ()
-{
-	'use strict';
+function ready(fn) {
+	if (document.readyState != 'loading') {
+		fn();
+	} else {
+		document.addEventListener('DOMContentLoaded', fn);
+	}
+}
 
+function imageClick(e) {
+	e.preventDefault();
+	unzoomImages();
+	this.classList.toggle('zoomed');
+}
+
+function handleEsc(e) {
+	if (e.keyCode == 27 || (e.type === 'click' && e.target.nodeName.toLowerCase() !== 'img')) {
+		unzoomImages();
+	}
+}
+
+function unzoomImages() {
+	var zoomedImages = document.querySelectorAll('img.zoomed');
+	Array.prototype.forEach.call(zoomedImages, function(el, i) {
+		el.classList.toggle('zoomed');
+	});
+}
+	
+ready(function() {
 	// Hamburger Menu
 	var toggles = document.querySelectorAll('.c-hamburger');
 	for (var i = toggles.length - 1; i >= 0; i--)
@@ -34,4 +58,12 @@
 			links[i].target = '_blank';
 		}
 	}
-})();
+
+	var images = document.querySelectorAll('article img');
+	Array.prototype.forEach.call(images, function(el, i) {
+		el.addEventListener('click', imageClick);
+	});
+
+	document.addEventListener('keyup', handleEsc);
+	document.addEventListener('click', handleEsc);
+});

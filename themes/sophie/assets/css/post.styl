@@ -1,28 +1,53 @@
-.post-date
-  color #9E9E9E
+.post
+  figure.thumb
+    img
+      max-height 200px
+  img 
+    max-width 100%
+    cursor zoom-in
+    &.zoomed
+      z-index 99
+      position fixed
+      top 5vh
+      bottom 5vh
+      left 5vw
+      right 5vw
+      max-width 90vw !important
+      max-height 90vh !important
+      margin auto
+      border 4px solid #333
 
-.post-title
-  font-size 32px
-  font-weight 600
-  line-height 1
-  margin-bottom 16px
-  text-transform uppercase
-  & > a
-    color #182532
+  .post-date
+    color #9E9E9E
 
-.post-read-more
-  background-color #ededed
-  border-radius 3px
-  color #656565
-  display block
-  padding 8px 16px
-  text-align center
+  h1
+    font-size 32px
+    font-weight 600
+    line-height 1
+    margin-bottom 16px
+    text-transform uppercase
+    & > a
+      color #182532
+    
+  h2,h3,h4
+    margin-bottom 0
 
-.post-tag
-  color #9E9E9E
-  margin-right 5px
-
-@media only screen and (min-width 768px)
   .post-read-more
-    display inline-block
+    background-color #ededed
+    border-radius 3px
+    color #656565
+    display block
+    padding 8px 16px
     text-align center
+
+  .post-tag
+    color #9E9E9E
+    margin-right 5px
+
+  ol ol
+    list-style-type lower-alpha
+
+  @media only screen and (min-width 768px)
+    .post-read-more
+      display inline-block
+      text-align center

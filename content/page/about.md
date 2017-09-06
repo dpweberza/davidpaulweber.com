@@ -2,7 +2,10 @@
 title: About me
 ---
 
-Hi, I'm David
+Hi, 
+
+I'm David and I am a passionate, professional and dedicated full-stack software engineer with a love of product development.
+You will often find me experimenting with new technology stacks or just reading up on development articles.
 
 There's more coming here soon, in the mean time please view my LinkedIn profile below:
 

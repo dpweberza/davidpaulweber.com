@@ -1,2 +1,2 @@
 # davidpaulweber.com
-Personal portfolio and blog
+Personal portfolio and blog built with hugo.
