@@ -1,7 +1,7 @@
 ---
 title: Redesigning our BSS quoting interface
 date: 2017-04-08
-tags: ['Projects', 'SOLIDitech', 'Work']
+tags: ["Projects", "SOLIDitech"]
 draft: true
 ---
 

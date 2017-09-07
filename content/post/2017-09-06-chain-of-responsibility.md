@@ -1,6 +1,6 @@
 +++
 date = "2017-09-06"
-tags = ["Work", "SOLIDitech", "Technical", "Java", "Design Pattern"]
+tags = ["SOLIDitech", "Java", "Design Pattern"]
 title = "Design Patterns: Chain of Responsibility - A case study"
 +++
 

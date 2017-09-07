@@ -1,6 +1,6 @@
 +++
 date = "2017-04-13T20:10:59+00:00"
-tags = ["Work", "SOLIDitech", "Technical", "Java", "Hibernate", "Scalability"]
+tags = ["SOLIDitech", "Java", "Hibernate", "Scalability"]
 title = "Hibernate Batch Inserts"
 +++
 
