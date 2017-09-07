@@ -6,6 +6,7 @@ title = "Coding Challenge: Coin Dispense System"
 
 ## Preamble
 I have started cleaning up and updating my Github account [https://github.com/dpweberza](https://github.com/dpweberza) as more and more companies these days are likely to view it.
+Because I don't have many open-source projects, I have uploaded a rather meaty coding challenge that I completed back in 2015.
 
 ## The Coding Challenge
 In 2015 I interviewed at a global mobile payments company for the position of Android Developer.
@@ -57,3 +58,7 @@ Frameworks / Libraries:
 Assumptions:
 
 * The client only accepts a single rand note value.
+
+
+### Preview
+{{< figure src="/static/img/coin-dispense-animation.gif" >}}
