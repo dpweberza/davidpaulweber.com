@@ -2,6 +2,7 @@
 date = "2017-09-10"
 tags = ["React", "Redux", "TypeScript", "Coding Challenge", "Portfolio"]
 title = "Coding Challenge: Contact Form"
+draft = true
 +++
 
 ## Preamble
