@@ -24,6 +24,15 @@ function unzoomImages() {
 		el.classList.toggle('zoomed');
 	});
 }
+
+function toggleHandler(toggle)
+{
+	toggle.addEventListener('click', function (e)
+	{
+		e.preventDefault();
+		(this.classList.contains('is-active') === true) ? this.classList.remove('is-active') : this.classList.add('is-active');
+	});
+}
 	
 ready(function() {
 	// Hamburger Menu
@@ -33,20 +42,11 @@ ready(function() {
 		var toggle = toggles[i];
 		toggleHandler(toggle);
 	}
-
-	function toggleHandler(toggle)
-	{
-		toggle.addEventListener('click', function (e)
-		{
-			e.preventDefault();
-			(this.classList.contains('is-active') === true) ? this.classList.remove('is-active') : this.classList.add('is-active');
-		});
-	}
-
 	document.getElementById('nav-btn').addEventListener('click', function (event)
 	{
 		var nav = document.getElementById('nav-list');
 		nav.classList.toggle('open');
+		console.log(nav);
 	}, false);
 
 	// Open external links in new tabs
@@ -59,11 +59,11 @@ ready(function() {
 		}
 	}
 
+	// Image zoom
 	var images = document.querySelectorAll('article img');
 	Array.prototype.forEach.call(images, function(el, i) {
 		el.addEventListener('click', imageClick);
 	});
-
 	document.addEventListener('keyup', handleEsc);
 	document.addEventListener('click', handleEsc);
 });
