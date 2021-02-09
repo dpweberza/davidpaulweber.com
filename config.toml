@@ -1,7 +1,7 @@
 theme = 'sophie'
 languageCode = 'en-us'
 title = 'David Weber'
-baseurl = 'http://www.davidpaulweber.com'
+baseurl = 'https://davidweber.dev'
 
 [params]
 description = 'Personal portfolio and blog about software development'
