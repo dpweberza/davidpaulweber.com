@@ -17,7 +17,7 @@ git push origin master
 # Push compiled site
 cd public
 git add -A
-git commit -m "$msg"
+git commit -m "$msg" --no-verify
 git push origin master
 
 # Come Back
